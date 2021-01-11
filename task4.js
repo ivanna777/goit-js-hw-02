@@ -1,14 +1,12 @@
-let string;
 const formatString = function(string) {
-    
-    if((string.split('')).length < 40) {
-        return(string);
+    let formatedString;
+    if (string.length <= 40) {
+        formatedString = string;
     } else {
-        let newString = string.split('').splice(0,40).join('');
-        newString+=('...'); 
-        return(newString);
+        formatedString = string.split('').splice(0, 40).join('')+'...';
     }
-  };
+    return formatedString;
+}
   
   
   console.log(formatString('Curabitur ligula sapien, tincijkllkn.'));
